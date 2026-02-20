@@ -2,20 +2,19 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\AuthController;
-use App\Http\Controllers\Api\VehiculoController;
 
 /*
 |--------------------------------------------------------------------------
 | API Routes
 |--------------------------------------------------------------------------
-| Aquí se registran todas las rutas de la API
-| Estas rutas usan el prefijo /api automáticamente
+|
+| Estas rutas API no se utilizan actualmente en el proyecto web.
+| Se implementarán en el futuro si se desarrolla una API REST.
+|
 */
 
-Route::post('/register', [AuthController::class, 'register']);
-Route::post('/login', [AuthController::class, 'login']);
-
-// Rutas de Vehículos
-Route::get('/vehiculos', [VehiculoController::class, 'index']);
-Route::post('/vehiculos', [VehiculoController::class, 'store']);
+Route::get('/test', function () {
+    return response()->json([
+        'message' => 'API funcionando correctamente'
+    ]);
+});
